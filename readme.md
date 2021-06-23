@@ -11,6 +11,7 @@ This repo contains the **front-end** implementation of Chamedoon Landing Page.
 - [How To Run Project](#how-to-run-project)
   - [Install Libraries](#install-libraries)
   - [Update Libraries (Optional)](<#update-libraries-(optional)>)
+  - [Create Build Bundle File](#create-build-bundle-file)
   - [Run Project](#run-project)
 - [Built With](#built-with)
 - [Authors](#authors)
@@ -91,7 +92,7 @@ $ yarn upgrade
 
 And wait for the process to be completed.
 
-### Creating The Build Bundle File
+### Create Build Bundle File
 
 Now, you have to create the bundle file using the following commands:
 
