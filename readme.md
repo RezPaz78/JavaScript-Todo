@@ -91,6 +91,24 @@ $ yarn upgrade
 
 And wait for the process to be completed.
 
+### Creating The Build Bundle File
+
+Now, you have to create the bundle file using the following commands:
+
+**Note:** if you do not have yarn installed:
+
+```
+$ npm build
+```
+
+**Note:** if you have yarn installed:
+
+```
+$ yarn build
+```
+
+And wait for the process to be completed.
+
 ### Run Project
 
 Now you have everything set up for running the project.
