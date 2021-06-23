@@ -1,8 +1,9 @@
-import { taskList, taskInput } from "./nodes";
+import { taskList, taskInput, body } from "./nodes";
 import { storageTaskInLS } from "./storageTasksInLS";
 import { createListElement } from "./createListElement";
 import { taskCounter } from "./taskCounter";
 import axios from "axios";
+import { playerCreator } from "./videoPlayer";
 
 export const addTask = (e) => {
   e.preventDefault();
@@ -11,7 +12,7 @@ export const addTask = (e) => {
     return;
   }
 
-  let li = createListElement(taskInput.value)
+  let li = createListElement(taskInput.value);
 
   taskList.appendChild(li);
   storageTaskInLS(taskInput.value);
@@ -19,7 +20,18 @@ export const addTask = (e) => {
 
   let taskCount = taskCounter();
 
-  if (taskCount === 5) {
-    axios.get("/fa/v1/video/video/mostViewedVideos").then(res => console.log(res))
-  } 
+  if (taskCount % 5 === 0) {
+    axios
+      .get("http://api.aparat.com/fa/v1/video/video/mostViewedVideos")
+      .then((res) => {
+        const result = res.data.data;
+        const sortedResult = result.slice().sort((a, b) => {
+          const aVisitCount = a.attributes.visit_cnt;
+          const bVisitCount = b.attributes.visit_cnt;
+          return bVisitCount - aVisitCount;
+        });
+        const mostVisited = sortedResult[0].attributes;
+        playerCreator(mostVisited.preview_src);
+      });
+  }
 };
