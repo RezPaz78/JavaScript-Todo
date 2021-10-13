@@ -1,5 +1,5 @@
-import { taskList } from "./nodes";
-import { createListElement } from "./createListElement";
+import { taskList } from "../components/nodes";
+import { createListElement } from "../components/createListElement";
 
 export const getTasks = () => {
   let tasks;

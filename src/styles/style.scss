@@ -1,0 +1,23 @@
+body {
+  background-color: white;
+  height: 100vh;
+}
+
+.collection-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  direction: rtl;
+}
+
+.task-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10%;
+  direction: ltr;
+}
+
+.task-controls a {
+  margin: 0 !important;
+}

@@ -1,11 +1,10 @@
-import { addTask } from "./addTask";
-import { taskList, form, clearTask, filter, videoPlayer } from "./nodes";
-import { removeTask } from "./removeTask";
-import { getTasks } from "./getTasks";
-import { clearTasks } from "./clearTasks";
-import { filterTasks } from "./filterTasks";
-import { editTask } from "./editTask";
-import { closePlayer } from "./videoPlayer";
+import { addTask } from "../utils/addTask";
+import { taskList, form, clearTask, filter } from "./nodes";
+import { removeTask } from "../utils/removeTask";
+import { getTasks } from "../utils/getTasks";
+import { clearTasks } from "../utils/clearTasks";
+import { filterTasks } from "../utils/filterTasks";
+import { editTask } from "../utils/editTask";
 
 export const loadAllEvents = () => {
   document.addEventListener("DOMContentLoaded", getTasks);
@@ -25,5 +24,4 @@ export const loadAllEvents = () => {
   //Edit Tasks
   taskList.addEventListener("click", editTask);
 
-  videoPlayer.addEventListener("click", closePlayer);
 };

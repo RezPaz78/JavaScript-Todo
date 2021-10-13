@@ -2,20 +2,50 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    app: ["babel-polyfill", "./src/app.js"],
+    bundle: "./src/app.js",
   },
   output: {
+    filename: "[name].js",
     path: path.resolve(__dirname, "build"),
-    filename: "app.bundle.js",
   },
   module: {
     rules: [
       {
-        test: /\.js?$/,
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.less$/,
+        use: ["style-loader", "css-loader", "less-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "images/[hash][ext][query]",
+          publicPath: "build/",
+        },
+      },
+      {
+        test: /\.(woff|woff2|ttf|eot|otf)$/,
+        type: "asset/resource",
+        generator: {
+          filename: "fonts/[name][ext]",
+          publicPath: "build/",
+        },
+      },
+      {
+        test: /\.m?js$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
-        query: {
-          presets: ["env", "stage-0"],
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
         },
       },
     ],
