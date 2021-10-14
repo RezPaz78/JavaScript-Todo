@@ -20,6 +20,6 @@
   },
   "scripts": {
     "build": "webpack --mode=production --progress",
-    "watch": "webpack --mode=development --watch"
+    "start": "webpack --mode=development --watch"
   }
 }
