@@ -1,0 +1,11 @@
+.navbar {
+  background-color: $nav-bg-color;
+  padding: 0.7rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    @include typographyStyle(1.8rem, bold, normal, $white);
+  }
+}

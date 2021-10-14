@@ -1,4 +1,5 @@
 // base
-@import "./base/base", "./style", "./base/variables", "./base/mixins";
+@import "./base/base", "./base/variables", "./base/mixins";
 
-//
+// components
+@import "./components/navbar", "./components/panel", "./components/tasks";

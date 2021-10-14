@@ -1,7 +1,6 @@
 import { taskList, taskInput, body } from "../components/nodes";
 import { storageTaskInLS } from "./storageTasksInLS";
 import { createListElement } from "../components/createListElement";
-import { taskCounter } from "./taskCounter";
 
 export const addTask = (e) => {
   e.preventDefault();
@@ -15,6 +14,4 @@ export const addTask = (e) => {
   taskList.appendChild(li);
   storageTaskInLS(taskInput.value);
   taskInput.value = "";
-
-  let taskCount = taskCounter();
 };

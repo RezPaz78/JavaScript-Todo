@@ -1,4 +1,4 @@
-export const removeTasksFromLS = (TaskItem) => {
+export const removeTasksFromLS = (taskItem) => {
   let tasks;
   if (localStorage.getItem("tasks") === null) {
     tasks = [];
@@ -6,7 +6,7 @@ export const removeTasksFromLS = (TaskItem) => {
     tasks = JSON.parse(localStorage.getItem("tasks"));
   }
   tasks.forEach((task, index) => {
-    if (TaskItem.textContent === task) {
+    if (taskItem.firstChild.textContent === task) {
       tasks.splice(index, 1);
     }
   });

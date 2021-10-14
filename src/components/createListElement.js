@@ -1,27 +1,27 @@
 export const createListElement = (text) => {
-    let li = document.createElement("li");
-    li.className = "collection-item";
+  const li = document.createElement("li");
+  li.className = "panel__collection_item";
 
-    let value = document.createElement("span")
-    value.className = "task-value"
+  const valueSpan = document.createElement("span");
+  valueSpan.className = "panel__collection_item-value";
+  valueSpan.textContent = text;
 
-    let span = document.createElement("span");
-  span.className = "task-controls";
+  const span = document.createElement("span");
+  span.className = "panel__collection_item-controls";
 
-    let link = document.createElement("a");
-    link.className = "delete-item secondary-content";
-    link.innerHTML = '<i class="fa fa-remove"></i>';
+  const deleteBtn = document.createElement("button");
+  deleteBtn.className = "panel__collection_item-controls--delete";
+  deleteBtn.innerHTML = "Delete";
 
-    let edit = document.createElement("i");
-    edit.className = "fas fa-edit";
-    
-    span.appendChild(edit);
-    span.appendChild(link);
+  const edit = document.createElement("button");
+  edit.className = "panel__collection_item-controls--edit";
+  edit.innerHTML = "Edit";
 
-    li.appendChild(span);
-    li.appendChild(value);
+  span.appendChild(edit);
+  span.appendChild(deleteBtn);
 
-    value.textContent = text;
+  li.appendChild(valueSpan);
+  li.appendChild(span);
 
-    return li;
-}
+  return li;
+};

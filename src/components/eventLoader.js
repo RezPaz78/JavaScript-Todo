@@ -1,5 +1,5 @@
-import { addTask } from "../utils/addTask";
 import { taskList, form, clearTask, filter } from "./nodes";
+import { addTask } from "../utils/addTask";
 import { removeTask } from "../utils/removeTask";
 import { getTasks } from "../utils/getTasks";
 import { clearTasks } from "../utils/clearTasks";

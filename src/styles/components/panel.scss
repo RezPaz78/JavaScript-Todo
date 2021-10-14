@@ -1,0 +1,81 @@
+.panel {
+  border: 1px solid $border-color;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 2rem;
+  background-color: $bg-color;
+
+  &__title {
+    @include typographyStyle(1.5rem, bold, normal, $white);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__form {
+    &-input {
+      label {
+        margin-bottom: 1rem;
+        @include typographyStyle(1.3rem, lighter, normal, $caption-color);
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+      }
+
+      input {
+        width: 100%;
+        border-radius: 6px;
+        border: 1px solid $border-color;
+        padding: 0.7rem;
+        background-color: $bg-color;
+        @include typographyStyle(1rem, normal, normal, $white);
+      }
+    }
+
+    &-submit {
+      background-color: $button-bg-color;
+      @include typographyStyle(1rem, normal, normal, $white);
+      border: 1px solid $border-color;
+      border-radius: 6px;
+      padding: 0.7rem;
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+
+  &__filter {
+    margin-top: 3rem;
+
+    &-input {
+      margin-bottom: 2rem;
+
+      label {
+        margin-bottom: 1rem;
+        @include typographyStyle(1.3rem, lighter, normal, $caption-color);
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+      }
+
+      input {
+        width: 100%;
+        border-radius: 6px;
+        border: 1px solid $border-color;
+        padding: 0.7rem;
+        background-color: $bg-color;
+        @include typographyStyle(1rem, normal, normal, $white);
+      }
+    }
+  }
+
+  &__clearTask {
+    background-color: $button-bg-color;
+    @include typographyStyle(1rem, normal, normal, $white);
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    padding: 0.7rem;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}

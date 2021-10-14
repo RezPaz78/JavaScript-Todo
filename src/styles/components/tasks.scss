@@ -1,0 +1,41 @@
+.panel__collection {
+  list-style: none;
+
+  &-title {
+    margin-bottom: 1rem;
+  }
+
+  &_item {
+    border: 1px solid $task-border-color;
+    border-radius: 6px;
+    background-color: $task-bg-color;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &-value {
+      @include typographyStyle(1rem, normal, normal, $task-text-color);
+    }
+
+    &-controls {
+      &--edit {
+        margin-left: 0.5rem;
+        background-color: $edit-bg-color;
+        border: 1px solid $edit-border-color;
+        @include typographyStyle(0.5rem, normal, normal, $edit-text-color);
+        padding: 0.5rem;
+      }
+
+      &--delete {
+        margin-left: 0.5rem;
+        background-color: $delete-bg-color;
+        border: 1px solid $delete-border-color;
+        @include typographyStyle(0.5rem, normal, normal, $delete-text-color);
+        padding: 0.5rem;
+      }
+    }
+  }
+}
