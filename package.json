@@ -1,8 +1,8 @@
 {
-  "name": "webpack-project",
+  "name": "js-todo",
   "version": "1.0.0",
   "description": "This is ToDo app, using vanilla JS",
-  "private": true,
+  "private": false,
   "author": "Reza Pazan",
   "license": "MIT",
   "devDependencies": {
