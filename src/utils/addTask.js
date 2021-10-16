@@ -1,4 +1,4 @@
-import { taskList, taskInput, body } from "../components/nodes";
+import { taskList, taskInput } from "../components/nodes";
 import { storageTaskInLS } from "./storageTasksInLS";
 import { createListElement } from "../components/createListElement";
 

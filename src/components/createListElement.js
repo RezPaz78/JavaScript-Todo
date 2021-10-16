@@ -13,11 +13,11 @@ export const createListElement = (text) => {
   deleteBtn.className = "panel__collection_item-controls--delete";
   deleteBtn.innerHTML = "Delete";
 
-  const edit = document.createElement("button");
-  edit.className = "panel__collection_item-controls--edit";
-  edit.innerHTML = "Edit";
+  const editBtn = document.createElement("button");
+  editBtn.className = "panel__collection_item-controls--edit";
+  editBtn.innerHTML = "Edit";
 
-  span.appendChild(edit);
+  span.appendChild(editBtn);
   span.appendChild(deleteBtn);
 
   li.appendChild(valueSpan);
